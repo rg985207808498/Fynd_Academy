@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Cup</title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(3, 3, 3);
+            height: 100vh;
+        }
+        .maincontainer {
+            padding: 3%;
+            background-color: black;
+        }
+        .container {
+            /* if U want to change size of cup then increse the width and height of this container */
+            width: 400px;
+            height: 400px;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+        .cover {
+            width: 100%;
+            height: 25%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: black;
+            z-index: 99;
+        }
+        .mou {
+            width: 74%;
+            height: 60px;
+            border: 5px solid white;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            /* background-color: rgba(245, 242, 242, .1);
+            backdrop-filter: blur(10px); */
+        }
+        .glass {
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            z-index: 9;
+            border: 5px solid white;
+            border-radius: 50% 50% 45% 45%;
+            /* background-color: rgba(245, 242, 242, .1);
+            backdrop-filter: blur(20px); */
+            overflow: hidden;
+        }
+        .glass::after {
+            width: 100%;
+            height: 41%;
+            position: absolute;
+            content: "";
+            bottom: 0px;
+            background-color: rgb(207, 124, 64);
+            backdrop-filter: blur(13px);
+        }
+        .handel {
+            position: absolute;
+            border: 5px solid white;
+            border-left: none;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -10%;
+            width: 40%;
+            height: 40%;
+            border-radius: 10% 30% 70% 0%;
+        }
+        .liq {
+            width: 100%;
+            height: 10%;
+            /* border: 2px solid chocolate; */
+            border-radius: 50%;
+            position: absolute;
+            bottom: 36%;
+            z-index: 9;
+            background-color: rgba(202, 111, 46);
+            backdrop-filter: blur(13px);
+            animation: ani2 1.5s ease-in-out 1s infinite;
+           
+        }
+        @keyframes ani2 {
+            0% {
+                border-radius: 50%;
+            }
+            50% {
+                border-radius: 43%;
+            }
+            100% {
+                border-radius: 50%;
+            }
+        }
+        .mou>ol {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            height: 100%;
+            /* border: 2px solid green; */
+            list-style: none;
+        }
+        .mou>ol>li {
+            width: 3%;
+            height: 80%;
+            float: left;
+            border-radius: 50%;
+            margin: 0px 6.5%;
+            box-shadow: 0px 0px 40px white;
+            opacity: 0;
+        }
+        .mou>ol>li:nth-child(1) {
+            animation: ani 1.5s ease-out 1s infinite;
+        }
+        .mou>ol>li:nth-child(2) {
+            animation: ani 1.7s ease-out .6s infinite;
+        }
+        .mou>ol>li:nth-child(3) {
+            animation: ani 1s ease-out .6s infinite;
+        }
+        .mou>ol>li:nth-child(4) {
+            animation: ani 1.3s ease-out 2s infinite;
+        }
+        .mou>ol>li:nth-child(5) {
+            animation: ani 1.5s ease-out infinite;
+        }
+        @keyframes ani {
+            0% {
+                transform: translateY(0px);
+                opacity: 0;
+                box-shadow: 0px 0px 30px white, 0px 0px 70px white, 0px 0px 80px white, 0px 0px 120px white, 0px 0px 100px white;
+                background-color: rgba(241, 235, 235, .25);
+                backdrop-filter: blur(20px);
+            }
+            100% {
+                transform: translateY(-260px);
+                opacity: 1;
+                box-shadow: 0px 0px 50px white, 0px 0px 70px white, 0px 0px 80px white, 0px 0px 120px white, 0px 0px 100px white, 0px 0px 130px white, 0px 0px 150px white;
+                background-color: rgba(241, 235, 235, .2);
+                backdrop-filter: blur(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="container">
+            <div class="cover">
+                <div class="mou">
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="glass ">
+                <div class="liq ">
+
+                </div>
+            </div>
+            <div class="handel "></div>
+        </div>
+    </div>
+</body>
+</html>
