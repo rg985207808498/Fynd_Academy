@@ -1,0 +1,46 @@
+<html>
+<head><title>htmlforms</title>
+</head>
+<style>
+    input[type=password] {
+      -webkit-text-security: square;
+      text-security: square;
+    }
+    </style>
+<body background="image\formbg.jpeg">
+<h2>Enter Your Details</h2>
+<form>
+<fieldset>
+<legend><strong>student's details</strong></legend>
+First Name:<input type="text" name="firstname"><br><br>
+Last Name:<input type="text" name="lastname" selected><br><br>
+Mob No:<input type="tel" name="usertel"><br><br>
+Email:<input type="email" name="mail"><br><br>
+Password:<input type="password" name="password"><br><br>
+DOB:<input type="date" name="dob"><br><br>
+DOB Time:<input type="time" name="birthtime"><br><br>
+Age:<input type="radio" name="age">under 18
+<input type="radio" name="age">over 18<br><br>
+<select name="qualification">
+<option value="b.tech"selected>B.Tech</option>
+<option value="m.tech">M.Tech</option>
+<option value="bsc">B.Sc</option>
+<option value="msc">M.Sc</option>
+</select>
+<br><br>
+<input type="checkbox" name="interest" value="football">Football
+<input type="checkbox" name="interest" value="cricket">Cricket
+<input type="checkbox" name="interest" value="hockey">Hockey<br><br>
+Favorite color:<input type="color" name="choosecolor"><br><br>
+Certificate File:<input type="file" name="choosefile"><br><br>
+Quantity:<input type="number" name="quantity" min="1" max="5"><br><br>
+Rating:<input type="range" name="rating"min="1" max="5"><br><br>
+Review:<br>
+<textarea name="usermessage"rows="5" col="10"></textarea><br><br>
+<input type="submit" value="click">   <input type="reset"><br>
+</fieldset>
+</form>
+
+
+</body>
+</html>
